@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 from functools import lru_cache
 
 class Settings(BaseSettings):
-    database_url: str = "postgresql://vps_user:vps_pass@localhost:5432/vps_platform"
+    database_url: str = "postgresql+pg8000://vps_user:vps_pass@localhost:5432/vps_platform"
     redis_url: str = "redis://localhost:6379/0"
     secret_key: str = "change-me-now"
     algorithm: str = "HS256"
